@@ -1,0 +1,21 @@
+# /dev/sda8 LABEL=Arch\134x20root
+UUID=xxx	/         	ext4      	rw,noatime,data=ordered	0 1
+
+# /dev/sda9 LABEL=Arch\134x20home
+UUID=xxx	/home     	ext4      	rw,noatime,data=ordered	0 2
+
+# /dev/sda10
+UUID=xxx	none      	swap      	defaults  	0 0
+
+# Data partition
+UUID=1ea26fc3-de98-4f47-b705-3334d42fb3d2  /mnt/Data     ext4     defaults,relatime     0     2
+/mnt/Data/Documents /home/x/Documents auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Desktop /home/x/Desktop auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/bin /home/x/bin auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Downloads /home/x/Downloads auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Music /home/x/Music auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Sec /home/x/Sec auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Code /home/x/Code auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Pictures /home/x/Pictures auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/Videos /home/x/Videos auto bind,x-systemd.requires=/mnt/Data 0 2
+/mnt/Data/games /home/x/games auto bind,x-systemd.requires=/mnt/Data 0 2
